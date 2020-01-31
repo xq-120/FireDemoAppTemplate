@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+	<key>Identifier</key>
+	<string>com.apple.dt.unit.fireDemoApplication</string>
+	<key>Ancestors</key>
+	<array>
+		<string>com.apple.dt.unit.cocoaTouchApplicationBase</string>
+		<string>com.apple.dt.unit.coreDataCocoaTouchApplication</string>
+	</array>
+	<key>Concrete</key>
+	<true/>
+	<key>Description</key>
+	<string>This template provides a starting point for an application that uses a tab view. It provides a tab view controller to manage the view.</string>
+	<key>SortOrder</key>
+	<integer>100</integer>
+	<key>NameOfInitialFileForEditor</key>
+	<string>ContentView.swift</string>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Identifier</key>
+			<string>languageChoice</string>
+			<key>Units</key>
+			<dict>
+				<key>Objective-C</key>
+				<dict>
+					<key>Nodes</key>
+					<array>
+						<string>FDEHomeViewController.h</string>
+						<string>FDEHomeViewController.m</string>
+						<string>FDEDetailViewController.h:comments</string>
+						<string>FDEDetailViewController.h:imports:importHeader:FDEBaseViewController.h</string>
+						<string>FDEDetailViewController.h:interface(___FILEBASENAME___ : FDEBaseViewController)</string>
+						<string>FDEDetailViewController.m:comments</string>
+						<string>FDEDetailViewController.m:imports:importHeader:FDEDetailViewController.h</string>
+						<string>FDEDetailViewController.m:extension</string>
+						<string>FDEDetailViewController.m:implementation:methods:viewDidLoad(- (void\)viewDidLoad)</string>
+						<string>FDEDetailViewController.m:implementation:methods:viewDidLoad:super</string>
+						<string>FDEMessageViewController.h:comments</string>
+						<string>FDEMessageViewController.h:imports:importHeader:FDEBaseViewController.h</string>
+						<string>FDEMessageViewController.h:interface(___FILEBASENAME___ : FDEBaseViewController)</string>
+						<string>FDEMessageViewController.m:comments</string>
+						<string>FDEMessageViewController.m:imports:importHeader:FDEMessageViewController.h</string>
+						<string>FDEMessageViewController.m:extension</string>
+						<string>FDEMessageViewController.m:extension:btn</string>
+						<string>FDEMessageViewController.m:implementation:methods:viewDidLoad(- (void\)viewDidLoad)</string>
+						<string>FDEMessageViewController.m:implementation:methods:viewDidLoad:super</string>
+						<string>FDEMessageViewController.m:implementation:methods:viewDidLoad:setupSubview</string>
+						<string>FDEMessageViewController.m:implementation:methods:setupSubview(- (void\)setupSubview)</string>
+						<string>FDEMessageViewController.m:implementation:methods:setupSubview:body</string>
+						<string>FDEMessageViewController.m:implementation:methods:btnDidClicked(- (void\)btnDidClicked:(UIButton *\)sender)</string>
+						<string>FDEMessageViewController.m:implementation:methods:btnDidClicked:body</string>
+						<string>FDEMessageViewController.m:implementation:methods:btn(- (UIButton *\)btn)</string>
+						<string>FDEMessageViewController.m:implementation:methods:btn:return</string>
+						<string>FDEMineViewController.h:comments</string>
+						<string>FDEMineViewController.h:imports:importHeader:FDEBaseViewController.h</string>
+						<string>FDEMineViewController.h:interface(___FILEBASENAME___ : FDEBaseViewController)</string>
+						<string>FDEMineViewController.m:comments</string>
+						<string>FDEMineViewController.m:imports:importHeader:FDEMineViewController.h</string>
+						<string>FDEMineViewController.m:extension</string>
+						<string>FDEMineViewController.m:implementation:methods:viewDidLoad(- (void\)viewDidLoad)</string>
+						<string>FDEMineViewController.m:implementation:methods:viewDidLoad:super</string>
+						<string>FDEMineViewController.m:implementation:methods:viewDidLoad:setupSubview</string>
+						<string>FDEMineViewController.m:implementation:methods:setupSubview(- (void\)setupSubview)</string>
+						<string>FDEMineViewController.m:implementation:methods:setupSubview:body</string>
+						<string>AppDelegate.m:imports:importHeader:FDETabBarController.h</string>
+						<string>AppDelegate.m:implementation:methods:applicationdidFinishLaunchingWithOptions:body</string>
+						<string>FDETabBarController.h</string>
+						<string>FDETabBarController.m</string>
+						<string>FDEBaseViewController.h</string>
+						<string>FDEBaseViewController.m</string>
+						<string>FDENavigationController.h</string>
+						<string>FDENavigationController.m</string>
+					</array>
+					<key>Definitions</key>
+					<dict>
+						<key>FDEMessageViewController.m:extension:btn</key>
+						<string>@property (strong, nonatomic) UIButton *btn;</string>
+						<key>FDEMessageViewController.m:implementation:methods:viewDidLoad:setupSubview</key>
+						<string>[self setupSubview];</string>
+						<key>FDEMessageViewController.m:implementation:methods:setupSubview:body</key>
+						<string>self.navigationItem.title = @&quot;消息&quot;;
+self.btn.center = self.view.center;
+[self.view addSubview:self.btn];</string>
+						<key>FDEMessageViewController.m:implementation:methods:btnDidClicked:body</key>
+						<string>NSLog(@&quot;btnDidClicked&quot;);</string>
+						<key>FDEMessageViewController.m:implementation:methods:btn:return</key>
+						<string>if (_btn == nil) {
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(0, 0, 100, 44);
+    btn.backgroundColor = [UIColor redColor];
+    [btn setTitle:@&quot;button&quot; forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(btnDidClicked:) forControlEvents:UIControlEventTouchUpInside];
+    _btn = btn;
+}
+return _btn;</string>
+						<key>FDEMineViewController.m:implementation:methods:viewDidLoad:setupSubview</key>
+						<string>[self setupSubview];</string>
+						<key>FDEMineViewController.m:implementation:methods:setupSubview:body</key>
+						<string>self.navigationItem.title = @&quot;我&quot;;</string>
+						<key>AppDelegate.m:implementation:methods:applicationdidFinishLaunchingWithOptions:body</key>
+						<string>self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+self.window.backgroundColor = [UIColor whiteColor];
+FDETabBarController *tabController = [[FDETabBarController alloc] init];
+self.window.rootViewController = tabController;
+[self.window makeKeyAndVisible];</string>
+						<key>FDETabBarController.h</key>
+						<dict>
+							<key>Path</key>
+							<string>./Objective-C/FDETabBarController.h</string>
+						</dict>
+						<key>FDETabBarController.m</key>
+						<dict>
+							<key>Path</key>
+							<string>./Objective-C/FDETabBarController.m</string>
+						</dict>
+						<key>FDEBaseViewController.h</key>
+						<dict>
+							<key>Path</key>
+							<string>./Objective-C/FDEBaseViewController.h</string>
+						</dict>
+						<key>FDEBaseViewController.m</key>
+						<dict>
+							<key>Path</key>
+							<string>./Objective-C/FDEBaseViewController.m</string>
+						</dict>
+						<key>FDENavigationController.h</key>
+						<dict>
+							<key>Path</key>
+							<string>./Objective-C/FDENavigationController.h</string>
+						</dict>
+						<key>FDENavigationController.m</key>
+						<dict>
+							<key>Path</key>
+							<string>./Objective-C/FDENavigationController.m</string>
+						</dict>
+						<key>FDEHomeViewController.h</key>
+						<dict>
+							<key>Path</key>
+							<string>./Objective-C/FDEHomeViewController.h</string>
+						</dict>
+						<key>FDEHomeViewController.m</key>
+						<dict>
+							<key>Path</key>
+							<string>./Objective-C/FDEHomeViewController.m</string>
+						</dict>
+					</dict>
+				</dict>
+				<key>Swift</key>
+				<array>
+					<dict>
+						<key>Nodes</key>
+						<array>
+							<string>FDEHomeViewController.swift</string>
+							<string>FDEDetailViewController.swift:comments</string>
+							<string>FDEDetailViewController.swift:imports:importCocoa</string>
+							<string>FDEDetailViewController.swift:implementation(___FILEBASENAME___: FDEBaseViewController)</string>
+							<string>FDEDetailViewController.swift:implementation:methods:viewDidLoad(override func viewDidLoad(\))</string>
+							<string>FDEDetailViewController.swift:implementation:methods:viewDidLoad:super</string>
+							<string>FDEMessageViewController.swift:comments</string>
+							<string>FDEMessageViewController.swift:imports:importCocoa</string>
+							<string>FDEMessageViewController.swift:implementation(___FILEBASENAME___: FDEBaseViewController)</string>
+							<string>FDEMessageViewController.swift:implementation:properties:btn</string>
+							<string>FDEMessageViewController.swift:implementation:methods:viewDidLoad(override func viewDidLoad(\))</string>
+							<string>FDEMessageViewController.swift:implementation:methods:viewDidLoad:super</string>
+							<string>FDEMessageViewController.swift:implementation:methods:viewDidLoad:setupSubview</string>
+							<string>FDEMessageViewController.swift:implementation:methods:setupSubview(func setupSubview(\))</string>
+							<string>FDEMessageViewController.swift:implementation:methods:setupSubview:body</string>
+							<string>FDEMessageViewController.swift:implementation:methods:btnDidClicked(@objc func btnDidClicked(_ sender: UIButton\))</string>
+							<string>FDEMessageViewController.swift:implementation:methods:btnDidClicked:body</string>
+							<string>FDEMineViewController.swift:comments</string>
+							<string>FDEMineViewController.swift:imports:importCocoa</string>
+							<string>FDEMineViewController.swift:implementation(___FILEBASENAME___: FDEBaseViewController)</string>
+							<string>FDEMineViewController.swift:implementation:methods:viewDidLoad(override func viewDidLoad(\))</string>
+							<string>FDEMineViewController.swift:implementation:methods:viewDidLoad:super</string>
+							<string>FDEMineViewController.swift:implementation:methods:viewDidLoad:setupSubview</string>
+							<string>FDEMineViewController.swift:implementation:methods:setupSubview(func setupSubview(\))</string>
+							<string>FDEMineViewController.swift:implementation:methods:setupSubview:body</string>
+							<string>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:body</string>
+							<string>FDETabBarController.swift</string>
+							<string>FDEBaseViewController.swift</string>
+							<string>FDENavigationController.swift</string>
+							<string>DLog.swift</string>
+						</array>
+						<key>Definitions</key>
+						<dict>
+							<key>FDEHomeViewController.swift</key>
+							<dict>
+								<key>Path</key>
+								<string>./Swift/FDEHomeViewController.swift</string>
+							</dict>
+							<key>FDETabBarController.swift</key>
+							<dict>
+								<key>Path</key>
+								<string>./Swift/FDETabBarController.swift</string>
+							</dict>
+							<key>FDEBaseViewController.swift</key>
+							<dict>
+								<key>Path</key>
+								<string>./Swift/FDEBaseViewController.swift</string>
+							</dict>
+							<key>FDENavigationController.swift</key>
+							<dict>
+								<key>Path</key>
+								<string>./Swift/FDENavigationController.swift</string>
+							</dict>
+							<key>DLog.swift</key>
+							<dict>
+								<key>Path</key>
+								<string>./Swift/DLog.swift</string>
+							</dict>
+							<key>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:body</key>
+							<string>window = UIWindow.init(frame: UIScreen.main.bounds)
+window?.backgroundColor = UIColor.white
+let root = FDETabBarController.init()
+window?.rootViewController = root
+window?.makeKeyAndVisible()</string>
+							<key>FDEMessageViewController.swift:implementation:properties:btn</key>
+							<string>var btn: UIButton = {
+    let btn = UIButton.init(type: .custom)
+    btn.frame = CGRect.init(x: 0, y: 0, width: 100, height: 44)
+    btn.setTitle(&quot;button&quot;, for: .normal)
+    btn.backgroundColor = .red
+    btn.addTarget(self, action: #selector(btnDidClicked(_:)), for: .touchUpInside)
+    return btn
+}()</string>
+							<key>FDEMessageViewController.swift:implementation:methods:viewDidLoad:setupSubview</key>
+							<string>setupSubview()</string>
+							<key>FDEMessageViewController.swift:implementation:methods:setupSubview:body</key>
+							<string>self.navigationItem.title = &quot;消息&quot;
+view.addSubview(btn)
+btn.center = self.view.center</string>
+							<key>FDEMessageViewController.swift:implementation:methods:btnDidClicked:body</key>
+							<string>DLog(&quot;btnDidClicked&quot;)</string>
+							<key>FDEMineViewController.swift:implementation:methods:viewDidLoad:setupSubview</key>
+							<string>setupSubview()</string>
+							<key>FDEMineViewController.swift:implementation:methods:setupSubview:body</key>
+							<string>self.navigationItem.title = &quot;我&quot;</string>
+						</dict>
+					</dict>
+					<dict>
+						<key>RequiredOptions</key>
+						<dict>
+							<key>userInterface</key>
+							<string>SwiftUI</string>
+						</dict>
+						<key>Nodes</key>
+						<array>
+							<string>ContentView.swift</string>
+							<string>Preview Content/Preview Assets.xcassets</string>
+							<string>SceneDelegate.swift:imports:importSwiftUI</string>
+							<string>SceneDelegate.swift:implementation:methods:sceneWillConnectToSession:body</string>
+							<string>SceneDelegate.swift:implementation:methods:sceneWillConnectToSession:body:windowScene</string>
+						</array>
+						<key>Definitions</key>
+						<dict>
+							<key>ContentView.swift</key>
+							<dict>
+								<key>SortOrder</key>
+								<integer>99</integer>
+								<key>Path</key>
+								<string>ContentView.swift</string>
+							</dict>
+							<key>Preview Content/Preview Assets.xcassets</key>
+							<dict>
+								<key>SortOrder</key>
+								<integer>100</integer>
+								<key>Path</key>
+								<string>Preview Assets.xcassets</string>
+								<key>Group</key>
+								<string>Preview Content</string>
+							</dict>
+							<key>SceneDelegate.swift:implementation:methods:sceneWillConnectToSession:body</key>
+							<string>
+// Create the SwiftUI view that provides the window contents.
+let contentView = ContentView()
+</string>
+							<key>SceneDelegate.swift:implementation:methods:sceneWillConnectToSession:body:windowScene</key>
+							<string>
+// Use a UIHostingController as window root view controller.
+if let windowScene = scene as? UIWindowScene {
+    let window = UIWindow(windowScene: windowScene)
+    window.rootViewController = UIHostingController(rootView: contentView)
+    self.window = window
+    window.makeKeyAndVisible()
+}</string>
+							<key>*:imports:importSwiftUI</key>
+							<string>import SwiftUI</string>
+						</dict>
+						<key>Targets</key>
+						<array>
+							<dict>
+								<key>SharedSettings</key>
+								<dict>
+									<key>ENABLE_PREVIEWS</key>
+									<string>YES</string>
+									<key>DEVELOPMENT_ASSET_PATHS</key>
+									<string>___PACKAGENAMEPREVIEWCONTENT:quoteIfNeeded___</string>
+								</dict>
+							</dict>
+						</array>
+					</dict>
+					<dict>
+						<key>RequiredOptions</key>
+						<dict>
+							<key>userInterface</key>
+							<string>SwiftUI</string>
+							<key>coreData</key>
+							<string>true</string>
+						</dict>
+						<key>Nodes</key>
+						<array>
+							<string>SceneDelegate.swift:implementation:methods:sceneWillConnectToSession:body</string>
+						</array>
+						<key>Definitions</key>
+						<dict>
+							<key>SceneDelegate.swift:implementation:methods:sceneWillConnectToSession:body</key>
+							<string>
+// Get the managed object context from the shared persistent container.
+let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
+// Create the SwiftUI view and set the context as the value for the managedObjectContext environment keyPath.
+// Add `@Environment(\.managedObjectContext)` in the views that will need the context.
+let contentView = ContentView().environment(\.managedObjectContext, context)
+</string>
+						</dict>
+					</dict>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>userInterface</string>
+			<key>Name</key>
+			<string>User Interface:</string>
+			<key>Description</key>
+			<string>The type of user interface.</string>
+			<key>Values</key>
+			<array>
+				<string>SwiftUI</string>
+				<string>Storyboard</string>
+			</array>
+			<key>RequiredOptionsForValues</key>
+			<dict>
+				<key>SwiftUI</key>
+				<dict>
+					<key>languageChoice</key>
+					<string>Swift</string>
+				</dict>
+			</dict>
+			<key>Default</key>
+			<string>SwiftUI</string>
+			<key>Type</key>
+			<string>popup</string>
+		</dict>
+	</array>
+</dict>
+</plist>
