@@ -5,7 +5,7 @@ xctemplates_zip=FireDemoXCProjectTemplate.zip
 
 local_xctemplates_zip=`pwd`/$xctemplates_zip
 
-remote_url="https://github.com/xq-120/FireDemoAppTemplate/raw/master"
+remote_url="https://raw.githubusercontent.com/xq-120/FireDemoAppTemplate/blob/master/archive"
 temp_directory=`mktemp -d`
 
 
