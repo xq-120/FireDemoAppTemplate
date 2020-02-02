@@ -10,3 +10,15 @@
 2. 支持OC和Swift.  
 
 注意:使用该模板创建的Demo工程为纯代码工程,不会创建Main.storyboard.
+
+### 使用
+方式一:  
+在终端执行:
+`curl https://raw.githubusercontent.com/xq-120/FireDemoAppTemplate/master/install.sh -s | sh`
+可能需要给终端开启代理.这个应该都懂得.
+
+方式二:  
+将`Fire Demo App.xctemplate`文件夹拷贝到`~/Library/Developer/Xcode/Templates/Project Templates/Application`目录下.  
+将`XQCustom`文件夹拷贝到`~/Library/Developer/Xcode/Templates/File Templates`目录下.
+
+最后重启Xcode.
