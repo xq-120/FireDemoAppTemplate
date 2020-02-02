@@ -11,14 +11,28 @@
 
 注意:使用该模板创建的Demo工程为纯代码工程,不会创建Main.storyboard.
 
-### 使用
+### 安装
 方式一:  
 在终端执行:
 `curl https://raw.githubusercontent.com/xq-120/FireDemoAppTemplate/master/install.sh -s | sh`
-可能需要给终端开启代理.这个应该都懂得.
+如果没反应可能需要给终端开启代理.这个应该都懂得.
 
 方式二:  
 将`Fire Demo App.xctemplate`文件夹拷贝到`~/Library/Developer/Xcode/Templates/Project Templates/Application`目录下.  
 将`XQCustom`文件夹拷贝到`~/Library/Developer/Xcode/Templates/File Templates`目录下.
 
 最后重启Xcode.
+
+### 效果
+工程模板效果:
+![工程模板效果](./工程模板效果图.jpg)
+
+文件模板效果:
+![文件模板效果](./文件模板效果图.jpg)
+
+创建的Demo目录如下:
+
+![OC工程目录](./OC工程目录.jpg)
+
+![Swift工程目录](./Swift工程目录.jpg)
+
