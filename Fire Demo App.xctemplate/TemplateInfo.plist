@@ -75,6 +75,8 @@
 						<string>FDEBaseViewController.m</string>
 						<string>FDENavigationController.h</string>
 						<string>FDENavigationController.m</string>
+						<string>FDEItemModel.h</string>
+						<string>FDEItemModel.m</string>
 					</array>
 					<key>Definitions</key>
 					<dict>
@@ -148,6 +150,16 @@ self.window.rootViewController = tabController;
 							<key>Path</key>
 							<string>./Objective-C/FDEHomeViewController.m</string>
 						</dict>
+						<key>FDEItemModel.h</key>
+						<dict>
+							<key>Path</key>
+							<string>./Objective-C/FDEItemModel.h</string>
+						</dict>
+						<key>FDEItemModel.m</key>
+						<dict>
+							<key>Path</key>
+							<string>./Objective-C/FDEItemModel.m</string>
+						</dict>
 					</dict>
 				</dict>
 				<key>Swift</key>
@@ -185,6 +197,7 @@ self.window.rootViewController = tabController;
 							<string>FDEBaseViewController.swift</string>
 							<string>FDENavigationController.swift</string>
 							<string>DLog.swift</string>
+							<string>FDEItemModel.swift</string>
 						</array>
 						<key>Definitions</key>
 						<dict>
@@ -212,6 +225,11 @@ self.window.rootViewController = tabController;
 							<dict>
 								<key>Path</key>
 								<string>./Swift/DLog.swift</string>
+							</dict>
+							<key>FDEItemModel.swift</key>
+							<dict>
+								<key>Path</key>
+								<string>./Swift/FDEItemModel.swift</string>
 							</dict>
 							<key>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:body</key>
 							<string>window = UIWindow.init(frame: UIScreen.main.bounds)

@@ -38,8 +38,32 @@ class FDEHomeViewController: FDEBaseViewController, UITableViewDelegate, UITable
     func loadData() {
         dataList.removeAll()
         
-        let situations = ["situation 0 Title", "situation 1 Title", "situation 2 Title"]
-        dataList.append(contentsOf: situations)
+        let one = FDEItemModel.init()
+        one.title = "situation 0 Title"
+        one.actionBlk = { [weak self] in
+            let detailVC = FDECodableViewController.init()
+            detailVC.hidesBottomBarWhenPushed = true
+            self?.navigationController?.pushViewController(detailVC, animated: true)
+        }
+        dataList.append(one)
+        
+        let two = FDEItemModel.init()
+        two.title = "situation 1 Title"
+        two.actionBlk = { [weak self] in
+            let detailVC = FDECodableViewController.init()
+            detailVC.hidesBottomBarWhenPushed = true
+            self?.navigationController?.pushViewController(detailVC, animated: true)
+        }
+        dataList.append(two)
+        
+        let three = FDEItemModel.init()
+        three.title = "situation 2 Title"
+        three.actionBlk = { [weak self] in
+            let detailVC = FDECodableViewController.init()
+            detailVC.hidesBottomBarWhenPushed = true
+            self?.navigationController?.pushViewController(detailVC, animated: true)
+        }
+        dataList.append(three)
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -47,18 +71,17 @@ class FDEHomeViewController: FDEBaseViewController, UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let item = dataList[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let title = dataList[indexPath.row]
-        cell.textLabel?.text = title
+        cell.textLabel?.text = item.title
         cell.selectionStyle = .none
         cell.accessoryType = .disclosureIndicator
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailVC = FDEDetailViewController.init()
-        detailVC.hidesBottomBarWhenPushed = true
-        navigationController?.pushViewController(detailVC, animated: true)
+        let item = dataList[indexPath.row]
+        item.actionBlk?()
     }
 }
 

@@ -8,6 +8,7 @@
 
 #import "FDEHomeViewController.h"
 #import "FDEDetailViewController.h"
+#import "FDEItemModel.h"
 
 @interface FDEHomeViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -36,8 +37,34 @@
 - (void)loadData {
     [self.dataList removeAllObjects];
     
-    NSArray *situations = @[@"situation 0 Title", @"situation 1 Title", @"situation 2 Title"];
-    [self.dataList addObjectsFromArray:situations];
+    __weak typeof(self) weakSelf = self;
+    
+    FDEItemModel *one = [FDEItemModel new];
+    one.title = @"situation 0 Title";
+    one.actionBlk = ^{
+        FDEDetailViewController *detailVC = [FDEDetailViewController new];
+        detailVC.hidesBottomBarWhenPushed = YES;
+        [weakSelf.navigationController pushViewController:detailVC animated:YES];
+    };
+    [self.dataList addObject:one];
+    
+    FDEItemModel *two = [FDEItemModel new];
+    two.title = @"situation 1 Title";
+    two.actionBlk = ^{
+        FDEDetailViewController *detailVC = [FDEDetailViewController new];
+        detailVC.hidesBottomBarWhenPushed = YES;
+        [weakSelf.navigationController pushViewController:detailVC animated:YES];
+    };
+    [self.dataList addObject:two];
+    
+    FDEItemModel *three = [FDEItemModel new];
+    three.title = @"situation 2 Title";
+    three.actionBlk = ^{
+        FDEDetailViewController *detailVC = [FDEDetailViewController new];
+        detailVC.hidesBottomBarWhenPushed = YES;
+        [weakSelf.navigationController pushViewController:detailVC animated:YES];
+    };
+    [self.dataList addObject:three];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -47,9 +74,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    FDEItemModel *item = self.dataList[indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    NSString *title = self.dataList[indexPath.row];
-    cell.textLabel.text = title;
+    cell.textLabel.text = item.title;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
@@ -57,9 +84,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    FDEDetailViewController *detailVC = [FDEDetailViewController new];
-    detailVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:detailVC animated:YES];
+    FDEItemModel *item = self.dataList[indexPath.row];
+    if (item.actionBlk) {
+        item.actionBlk();
+    }
 }
 
 - (NSMutableArray *)dataList
