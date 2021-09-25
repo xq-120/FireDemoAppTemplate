@@ -19,7 +19,7 @@ class FDEHomeViewController: FDEBaseViewController, UITableViewDelegate, UITable
         return tableView
     }()
     
-    var dataList: [String] = []
+    var dataList: [FDEItemModel] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +41,7 @@ class FDEHomeViewController: FDEBaseViewController, UITableViewDelegate, UITable
         let one = FDEItemModel.init()
         one.title = "situation 0 Title"
         one.actionBlk = { [weak self] in
-            let detailVC = FDECodableViewController.init()
+            let detailVC = FDEDetailViewController.init()
             detailVC.hidesBottomBarWhenPushed = true
             self?.navigationController?.pushViewController(detailVC, animated: true)
         }
@@ -50,7 +50,7 @@ class FDEHomeViewController: FDEBaseViewController, UITableViewDelegate, UITable
         let two = FDEItemModel.init()
         two.title = "situation 1 Title"
         two.actionBlk = { [weak self] in
-            let detailVC = FDECodableViewController.init()
+            let detailVC = FDEDetailViewController.init()
             detailVC.hidesBottomBarWhenPushed = true
             self?.navigationController?.pushViewController(detailVC, animated: true)
         }
@@ -59,7 +59,7 @@ class FDEHomeViewController: FDEBaseViewController, UITableViewDelegate, UITable
         let three = FDEItemModel.init()
         three.title = "situation 2 Title"
         three.actionBlk = { [weak self] in
-            let detailVC = FDECodableViewController.init()
+            let detailVC = FDEDetailViewController.init()
             detailVC.hidesBottomBarWhenPushed = true
             self?.navigationController?.pushViewController(detailVC, animated: true)
         }
