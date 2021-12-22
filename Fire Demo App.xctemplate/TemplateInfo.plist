@@ -23,6 +23,32 @@
 	<array>
 		<dict>
 			<key>Identifier</key>
+			<string>appLifecycle</string>
+			<key>Units</key>
+			<dict>
+				<key>Cocoa</key>
+				<array>
+					<dict>
+						<key>Nodes</key>
+						<array>
+							<string>Info.plist:UIApplicationSceneManifest</string>
+						</array>
+						<key>Targets</key>
+						<array>
+							<dict>
+								<key>SharedSettings</key>
+								<dict>
+									<key>INFOPLIST_FILE</key>
+									<string>___PACKAGENAME___/Info.plist</string>
+								</dict>
+							</dict>
+						</array>
+					</dict>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>Identifier</key>
 			<string>languageChoice</string>
 			<key>Units</key>
 			<dict>
